@@ -12,7 +12,7 @@ def day_of_week():
     for i in range(len(days)):
         print(days[i])
 
-day_of_week()
+
 
 def favorite_activities():
 # #     # 2.1 TODO: Now, in a for loop, instead of just printing out the day,
@@ -38,38 +38,36 @@ def favorite_activities():
 #     # of the items in the lists (this will work because the lists are the same length).
 #     # Each time through this new loop, use the index number to index into each of your lists for the data
 #     # you need to print out.
-    for i in range(len(activities)):
-        print(f'On {days[i]}s, your favorite activity is to {activities[i]}')
+    for i in range(len(days)):
+        print(f'On {days[i]}s, your favorite activity is to {activities[i]}.')
 
-#     Take a look back at the code you just wrote. Look at how much it does!
-#     Often, programmers will be given large tasks, and it's our responsibility to be able to break it down into
-#     smaller pieces. We did the above piece by piece, but think about what the prompt might have been
-#     to get us there.
+    # Take a look back at the code you just wrote. Look at how much it does!
+    # Often, programmers will be given large tasks, and it's our responsibility to be able to break it down into
+    # smaller pieces. We did the above piece by piece, but think about what the prompt might have been
+    # to get us there.
 
-#     Maybe: Write a program that asks the user about their favorite thing to do each day of the week.
-#     Afterward, print out for the user each of their favorite daily activities.
+    # Maybe: Write a program that asks the user about their favorite thing to do each day of the week.
+    # Afterward, print out for the user each of their favorite daily activities.
 
-#     Would this larger task have felt doable without breaking it down into steps?
-#     Is it clear what needs to be done?
+    # Would this larger task have felt doable without breaking it down into steps?
+    # Is it clear what needs to be done?
 
-#     Try to break down the steps required for this second loop challenge.
-favorite_activities()
+    # Try to break down the steps required for this second loop challenge.
+
 
 def temp_by_day():
-# #     # 3 TODO: Write a program that loops through the days in the week. Each day, ask the user what the temperature
-# #     # is. If the temperature is below 50, tell the user to 'Brr, put on a jacket!'. Or, if the temperature is
-# #     # between 50 and 65, tell the user to 'Cozy, grab a sweater'. Finally, if the temperature is above 65,
-# #     # tell the user to 'Put on some sunscreen!'.
+#     # 3 TODO: Write a program that loops through the days in the week. Each day, ask the user what the temperature
+#     # is. If the temperature is below 50, tell the user to 'Brr, put on a jacket!'. Or, if the temperature is
+#     # between 50 and 65, tell the user to 'Cozy, grab a sweater'. Finally, if the temperature is above 65,
+#     # tell the user to 'Put on some sunscreen!'.
     for day in days:
         temp = int(input(f'Today is {day} what is the temperature outside?'))
-    if (temp <50):
-        print('Brr, put on a jacket!')
-    elif (temp > 50<65):
-        print('Cozy, grab a sweater')
-    else:
-        print('Put on sunscreen!')
-
-temp_by_day()
+        if temp < 50:
+            print('Brr, put on a jacket!')
+        elif temp < 65:
+            print('Cozy, grab a sweater')
+        else:
+            print('Put on some sunscreen!')
 
 def temp_by_day_continuous():
 # #     # 4 TODO: Write a program that asks the user what temperature it is outside. While the temperature is below 65,
@@ -78,10 +76,8 @@ def temp_by_day_continuous():
 
 # #     # NOTE: remember, if you accidentally create an infinite while loop, it's ok! Go into the command line and
 # #     # hit control + C to stop the program. No harm done to your computer (:
- temperature = int(input('What temperature is it outside?'))
- while temperature < 65:
-    print('wear a sweater')
-    if temperature > 65:
-        print('Spring has sprung!')
-    break
-temp_by_day_continuous()
+    temperature = int(input('What temperature is it outside?'))
+    while temperature <= 65:
+        print('Wear a sweater')
+        temperature = int(input('What temperature is it outside?'))
+    print('Spring has sprung!')    
